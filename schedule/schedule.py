@@ -1,17 +1,22 @@
-import urllib3
-
-import requests
-from bs4 import BeautifulSoup
+from logger import logger
 
 
-from .customCalendar import CustomCalendar
-from .calandarExceptions import (
-    TodayIsDaOffException,
-    TodaySundayException
-)
+_log = logger.getLogger(__name__)
 
+try:
+    import urllib3
+    import requests
+    from bs4 import BeautifulSoup
 
-urllib3.disable_warnings()
+    from .customCalendar import CustomCalendar
+    from .calandarExceptions import (
+        TodayIsDaOffException,
+        TodaySundayException
+    )
+
+    urllib3.disable_warnings()
+except Exception as e:
+    _log.error(e)
 
 
 class _ScheduleParser:
