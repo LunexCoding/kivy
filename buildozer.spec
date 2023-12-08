@@ -4,7 +4,7 @@
 title = My Application
 
 # (str) Package name
-package.name = myapp
+package.name = lunex
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.7.6,hostpython3==3.7.6,kivy,pillow,beautifulsoup4==4.12.2,bs4==0.0.1,lxml==4.9.3,requests==2.31.0,urllib3==2.0.7
+requirements = python3==3.7.6,hostpython3==3.7.6,kivy,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
